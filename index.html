@@ -1087,14 +1087,8 @@
       btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
     });
 
-    // Init lang
-    const savedLang = localStorage.getItem('preferredLang');
-    if (savedLang) {
-      setLanguage(savedLang);
-      hideModal();
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
+    // Init lang (force modal to show always on load)
+    document.body.style.overflow = 'hidden';
 
   })();
   </script>
