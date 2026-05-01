@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#F5F0E8" />
 
   <!-- SEO -->
-  <title>Sa Raval · Cocina mallorquina de mercado en Algaida</title>
-  <meta name="description" content="Restaurante Sa Raval en Algaida, Mallorca. Cocina tradicional mallorquina de mercado: sopa mallorquina, arroz brut, caracoles. Lunes a sábado, 08:30–16:00. +34 971 66 80 82" />
+  <title data-i18n="meta.title">Sa Raval · Cocina mallorquina de mercado en Algaida</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Restaurante Sa Raval en Algaida, Mallorca. Cocina tradicional mallorquina de mercado: sopa mallorquina, arroz brut, caracoles. Lunes a sábado, 08:30–16:00. +34 971 66 80 82" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="restaurant" />
@@ -28,6 +28,36 @@
 </head>
 <body>
 
+  <!-- Language Selector Modal (Splash) -->
+  <div id="lang-modal" class="lang-modal" aria-modal="true" role="dialog">
+    <div class="lang-modal__content dbezel">
+      <div class="dbezel__core">
+        <img src="img/TrevorDefi.png" alt="" class="lang-modal__logo" width="48" height="48" style="object-fit: contain;">
+        <h2 class="lang-modal__title">Benvinguts a Sa Raval</h2>
+        <p class="lang-modal__subtitle">Selecciona el teu idioma / Selecciona tu idioma</p>
+        
+        <div class="lang-modal__grid">
+          <button class="lang-opt" data-lang="es" aria-label="Español">
+            <span class="lang-opt__flag"><img src="https://flagcdn.com/es.svg" width="20" alt="ES" style="border-radius: 2px;"></span>
+            <span class="lang-opt__name">Español</span>
+          </button>
+          <button class="lang-opt" data-lang="ca" aria-label="Català">
+            <span class="lang-opt__flag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" width="20" alt="CA" style="border-radius: 2px;"></span>
+            <span class="lang-opt__name">Català</span>
+          </button>
+          <button class="lang-opt" data-lang="en" aria-label="English">
+            <span class="lang-opt__flag"><img src="https://flagcdn.com/gb.svg" width="20" alt="EN" style="border-radius: 2px;"></span>
+            <span class="lang-opt__name">English</span>
+          </button>
+          <button class="lang-opt" data-lang="de" aria-label="Deutsch">
+            <span class="lang-opt__flag"><img src="https://flagcdn.com/de.svg" width="20" alt="DE" style="border-radius: 2px;"></span>
+            <span class="lang-opt__name">Deutsch</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Skip link (accessibility) -->
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
@@ -37,56 +67,37 @@
   <div class="nav-wrap" role="banner">
     <nav class="nav" id="nav" aria-label="Navegación principal">
 
-      <a href="#hero" class="nav__logo" aria-label="Sa Raval — volver al inicio">
-        <svg class="nav__logo-clover" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 10C12 10 11.5 5.5 15 4C18.5 2.5 21 5 19 8C17 11 12 11 12 11C12 11 13 16 16 17C19 18 18.5 21.5 15 21C11.5 20.5 12 15 12 15C12 15 12.5 20.5 9 21C5.5 21.5 5 18 8 17C11 16 12 11 12 11C12 11 7 11 5 8C3 5 5.5 2.5 9 4C12.5 5.5 12 10 12 10Z" fill="currentColor"/>
-          <path d="M12 15L10 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Sa <em>Raval</em>
-      </a>
-
-      <div class="nav__lang" role="group" aria-label="Seleccionar idioma">
-        <button class="nav__lang-btn active" data-lang="es" type="button" aria-pressed="true">ES</button>
-        <button class="nav__lang-btn" data-lang="ca" type="button" aria-pressed="false">CA</button>
-        <button class="nav__lang-btn" data-lang="de" type="button" aria-pressed="false">DE</button>
-        <button class="nav__lang-btn" data-lang="en" type="button" aria-pressed="false">EN</button>
+      <div class="nav__left">
+        <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navOverlay" type="button">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" role="list">
+          <li><a href="#filosofia" data-i18n="nav.filosofia">Filosofía</a></li>
+          <li><a href="#carta" data-i18n="nav.carta">Carta</a></li>
+        </ul>
+        <a href="tel:+34971668082" class="nav__cta" aria-label="Reservar mesa">
+          <span data-i18n="nav.reservar">Reservar</span>
+          <span class="nav__cta-arrow" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
       </div>
 
-      <a
-        href="tel:+34670668082"
-        class="nav__cta"
-        aria-label="Llamar a Sa Raval para reservar mesa"
-      >
-        <span data-i18n="nav.reservar">Reservar</span>
-        <span class="nav__cta-arrow" aria-hidden="true">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </span>
+      <a href="#hero" class="nav__logo" aria-label="Sa Raval — volver al inicio">
+        Sa<img src="img/TrevorDefi.png" alt="" class="nav__logo-clover" aria-hidden="true" onerror="this.style.display='none'"><em>Raval</em>
       </a>
 
-      <ul class="nav__links" role="list">
-        <li><a href="#filosofia" data-i18n="nav.filosofia">Filosofía</a></li>
-        <li><a href="#carta" data-i18n="nav.carta">Carta</a></li>
-        <li><a href="#resenas" data-i18n="nav.resenas">Reseñas</a></li>
-        <li><a href="#contacto" data-i18n="nav.contacto">Cómo llegar</a></li>
-      </ul>
-
-      <a href="tel:+34670668082" class="nav__mobile-tel-icon" aria-label="Llamar a Sa Raval para reservar mesa">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      </a>
-
-      <button
-        class="nav__burger"
-        id="navBurger"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="navOverlay"
-        type="button"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
+      <div class="nav__right">
+        <div class="nav__lang" role="group" aria-label="Seleccionar idioma">
+          <button class="nav__lang-toggle" onclick="document.getElementById('lang-modal').classList.remove('hidden'); document.body.style.overflow='hidden';" aria-label="Cambiar idioma">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="nav__lang-text" data-i18n="nav.idioma">Idioma</span>
+          </button>
+        </div>
+        <a href="tel:+34971668082" class="nav__mobile-tel-icon" aria-label="Llamar a Sa Raval">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+      </div>
     </nav>
   </div>
 
@@ -104,12 +115,12 @@
       <button class="nav__lang-btn" data-lang="de">DE</button>
       <button class="nav__lang-btn" data-lang="en">EN</button>
     </div>
-    <a href="#filosofia" class="nav__overlay-link">Filosofía</a>
-    <a href="#carta"     class="nav__overlay-link">Carta</a>
-    <a href="#resenas"   class="nav__overlay-link">Reseñas</a>
-    <a href="#contacto"  class="nav__overlay-link">Cómo llegar</a>
+    <a href="#filosofia" class="nav__overlay-link" data-i18n="nav.filosofia">Filosofía</a>
+    <a href="#carta"     class="nav__overlay-link" data-i18n="nav.carta">Carta</a>
+    <a href="#resenas"   class="nav__overlay-link" data-i18n="nav.resenas">Reseñas</a>
+    <a href="#contacto"  class="nav__overlay-link" data-i18n="nav.contacto">Cómo llegar</a>
     <a
-      href="tel:+34670668082"
+      href="tel:+34971668082"
       class="nav__overlay-tel"
       aria-label="Llamar al restaurante Sa Raval"
     >
@@ -129,26 +140,28 @@
 
         <!-- Left: editorial copy -->
         <div class="hero__left">
-          <p class="hero__sup reveal" data-delay="1">Algaida · Mallorca · Desde siempre</p>
+          <p class="hero__sup reveal" data-delay="1" data-i18n="hero.sup">Algaida · Mallorca · Desde siempre</p>
 
           <h1 class="hero__title reveal" data-delay="2">Sa&nbsp;Raval</h1>
 
-          <p class="hero__tagline reveal" data-delay="3">
+          <p class="hero__tagline reveal" data-delay="3" data-i18n="hero.tagline">
             Cuina mallorquina de mercat · Algaida
           </p>
 
           <div class="hero__actions reveal" data-delay="4">
             <a
-              href="tel:+34670668082"
+              href="tel:+34971668082"
               class="btn-pill"
               aria-label="Llamar a Sa Raval para reservar mesa"
             >
-              Llamar para reservar
+              <span data-i18n="hero.cta_call">Llamar para reservar</span>
               <span class="btn-pill__arrow" aria-hidden="true">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
               </span>
             </a>
-            <a href="#carta" class="btn-ghost">Ver la carta</a>
+            <a href="#carta" class="btn-ghost" data-i18n="hero.cta_menu">Ver la carta</a>
           </div>
         </div>
 
@@ -158,11 +171,6 @@
           <!-- Restaurant photo -->
           <div class="hero__image dbezel reveal" data-delay="2">
             <div class="dbezel__core hero__image-inner">
-              <!-- Clover decoration -->
-              <svg class="hero__clover-decor" width="240" height="240" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 10C12 10 11.5 5.5 15 4C18.5 2.5 21 5 19 8C17 11 12 11 12 11C12 11 13 16 16 17C19 18 18.5 21.5 15 21C11.5 20.5 12 15 12 15C12 15 12.5 20.5 9 21C5.5 21.5 5 18 8 17C11 16 12 11 12 11C12 11 7 11 5 8C3 5 5.5 2.5 9 4C12.5 5.5 12 10 12 10Z" fill="currentColor"/>
-                <path d="M12 15L10 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
               <img src="img/restaurant-terrace.jpg" alt="Sa Raval - Algaida" loading="lazy" />
             </div>
           </div>
@@ -175,15 +183,15 @@
                     4<span class="hi">,5</span>
                     <svg class="stat-star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   </p>
-                  <p class="stat-cell__label">Google rating</p>
+                  <p class="stat-cell__label" data-i18n="hero.stats.rating">Google rating</p>
                 </div>
                 <div class="stat-cell">
                   <p class="stat-cell__value">954</p>
-                  <p class="stat-cell__label">Reseñas</p>
+                  <p class="stat-cell__label" data-i18n="hero.stats.reviews">Reseñas</p>
                 </div>
                 <div class="stat-cell">
                   <p class="stat-cell__value">€10<span class="hi">–</span>20</p>
-                  <p class="stat-cell__label">Por persona</p>
+                  <p class="stat-cell__label" data-i18n="hero.stats.price">Por persona</p>
                 </div>
                 <div class="stat-cell">
                   <p class="stat-cell__value" style="font-size:1.1rem;line-height:1.2;">Lun–Sáb</p>
@@ -206,6 +214,7 @@
           </div>
 
         </div>
+      </div>
 
       </div>
     </section>
@@ -219,32 +228,32 @@
 
         <!-- Left: title + body -->
         <div class="filosofia__left">
-          <span class="eyebrow-badge reveal">Nuestra manera de cocinar</span>
+          <span class="eyebrow-badge reveal" data-i18n="filosofia.eyebrow">Nuestra manera de cocinar</span>
 
-          <h2 class="filosofia__title reveal" id="filosofia-h2" data-delay="1">
-            El sabor honesto<br>de Mallorca
+          <h2 class="filosofia__title reveal" id="filosofia-h2" data-delay="1" data-i18n="filosofia.title">
+            El sabor honesto de Mallorca
           </h2>
 
           <div class="filosofia__body">
-            <p class="reveal" data-delay="2">
+            <p class="reveal" data-delay="2" data-i18n="filosofia.p1">
               En Sa Raval cada plato empieza en el mercado de Algaida. Elegimos
               los mejores ingredientes de temporada, los de los productores que
               conocemos por su nombre, y los cocinamos como se han cocinado
               siempre en esta isla: con tiempo, con técnica y sin artificios.
             </p>
-            <p class="reveal" data-delay="3">
+            <p class="reveal" data-delay="3" data-i18n="filosofia.p2">
               La sopa mallorquina, el arroz brut, los caracoles o los chipirones
               no son platos de menú&nbsp;— son la memoria gastronómica de
               Mallorca. Los cocinamos con respeto a la receta y a quien los va
               a comer. Por eso los lugareños llevan años volviendo cada semana.
             </p>
-            <p class="reveal" data-delay="4">
+            <p class="reveal" data-delay="4" data-i18n="filosofia.p3">
               Raciones generosas, precios honestos y el trato de siempre.
               Eso es Sa Raval.
             </p>
 
             <blockquote class="pull-quote reveal" data-delay="5">
-              <p>
+              <p data-i18n="filosofia.quote">
                 "Una joya culinaria del centro de Mallorca. Cocina de toda la
                 vida, ingredientes frescos y un trato que ya no se ve en
                 muchos sitios."
@@ -277,8 +286,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                 </span>
                 <div>
-                  <p class="highlight-item__title">Mercat local</p>
-                  <p class="highlight-item__desc">Ingredientes frescos de temporada, directos de productores del interior de Mallorca.</p>
+                  <p class="highlight-item__title" data-i18n="filosofia.h1.title">Mercat local</p>
+                  <p class="highlight-item__desc" data-i18n="filosofia.h1.desc">Ingredientes frescos de temporada, directos de productores del interior de Mallorca.</p>
                 </div>
               </div>
             </div>
@@ -289,8 +298,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </span>
                 <div>
-                  <p class="highlight-item__title">Tradición sin atajos</p>
-                  <p class="highlight-item__desc">Recetas mallorquinas de siempre, cocinadas con el tiempo que necesitan.</p>
+                  <p class="highlight-item__title" data-i18n="filosofia.h2.title">Tradición sin atajos</p>
+                  <p class="highlight-item__desc" data-i18n="filosofia.h2.desc">Recetas mallorquinas de siempre, cocinadas con el tiempo que necesitan.</p>
                 </div>
               </div>
             </div>
@@ -301,8 +310,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
                 <div>
-                  <p class="highlight-item__title">Trato excepcional</p>
-                  <p class="highlight-item__desc">Mencionado en más del 90&nbsp;% de las reseñas. No es suerte, es vocación.</p>
+                  <p class="highlight-item__title" data-i18n="filosofia.h3.title">Trato excepcional</p>
+                  <p class="highlight-item__desc" data-i18n="filosofia.h3.desc">Mencionado en más del 90&nbsp;% de las reseñas. No es suerte, es vocación.</p>
                 </div>
               </div>
             </div>
@@ -313,25 +322,20 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
                 </span>
                 <div>
-                  <p class="highlight-item__title">Terraza con vistas</p>
-                  <p class="highlight-item__desc">Come con el campo y la Serra de Tramuntana de fondo. Cada visita es diferente.</p>
+                  <p class="highlight-item__title" data-i18n="filosofia.h4.title">Terraza con vistas</p>
+                  <p class="highlight-item__desc" data-i18n="filosofia.h4.desc">Come con el campo y la Serra de Tramuntana de fondo. Cada visita es diferente.</p>
                 </div>
               </div>
             </div>
 
             <div class="highlight-item dbezel reveal" data-delay="6">
               <div class="dbezel__core">
-                <span class="highlight-item__icon" aria-hidden="true" style="color: var(--olive); background: rgba(92, 107, 58, 0.1);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22v-7" />
-                    <path d="M12 15c-3 0-5-3-3-6 1-1.5 2-1.5 3-1.5s2 0 3 1.5c2 3 0 6-3 6z" />
-                    <path d="M12 15c0 3-4 4-6.5 2-1.5-1-1-2-.5-3 .5-1 3-3 7-1" />
-                    <path d="M12 15c0 3 4 4 6.5 2 1.5-1 1-2 .5-3-.5-1-3-3-7-1" />
-                  </svg>
+                <span class="highlight-item__icon" aria-hidden="true" style="background: rgba(92, 107, 58, 0.1); padding: 4px;">
+                  <img src="img/TrevorDefi.png" alt="" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'">
                 </span>
                 <div>
-                  <p class="highlight-item__title">El trébol de tres hojas</p>
-                  <p class="highlight-item__desc">Símbolo de esperanza, fortuna y conexión con la tierra. Representa nuestros tres pilares: ingredientes locales, receta tradicional y trato excepcional.</p>
+                  <p class="highlight-item__title" data-i18n="filosofia.h5.title">El trébol de tres hojas</p>
+                  <p class="highlight-item__desc" data-i18n="filosofia.h5.desc">Símbolo de esperanza, fortuna y conexión con la tierra. Representa nuestros tres pilares: ingredientes locales, receta tradicional y trato excepcional.</p>
                 </div>
               </div>
             </div>
@@ -350,11 +354,12 @@
       <div class="carta__inner">
 
         <header class="carta__header reveal">
-          <span class="eyebrow-badge eyebrow-badge--light">Lo que cocinamos</span>
-          <h2 class="carta__title" id="carta-h2">Nuestra carta</h2>
-          <p class="carta__subtitle">
+          <span class="eyebrow-badge eyebrow-badge--light" data-i18n="carta.eyebrow">Lo que cocinamos</span>
+          <h2 class="carta__title" id="carta-h2" data-i18n="carta.title">Nuestra carta</h2>
+          <p class="carta__subtitle" data-i18n="carta.subtitle">
             Cocina de temporada · La carta varía según el mercado del día
           </p>
+          <div class="scroll-hint-mobile" aria-hidden="true" data-i18n="scroll.hint">Desliza para ver más →</div>
         </header>
 
         <div class="carta__bento">
@@ -362,24 +367,24 @@
           <!-- Desayunos & Café -->
           <article class="menu-card dbezel reveal" data-delay="1" aria-label="Categoría: Desayunos y café">
             <div class="dbezel__core">
-              <p class="menu-card__cat" aria-hidden="true">Desayunos &amp; Café</p>
-              <h3 class="menu-card__title">Para empezar el día</h3>
+              <p class="menu-card__cat" aria-hidden="true" data-i18n="carta.c1.cat">Desayunos &amp; Café</p>
+              <h3 class="menu-card__title" data-i18n="carta.c1.title">Para empezar el día</h3>
               <div class="menu-items">
                 <div class="menu-item">
-                  <p class="menu-item__name">Granizado de almendra</p>
-                  <p class="menu-item__desc">Bebida fría tradicional mallorquina, elaborada con almendra del Pla</p>
+                  <p class="menu-item__name" data-i18n="carta.c1.i1.name">Granizado de almendra</p>
+                  <p class="menu-item__desc" data-i18n="carta.c1.i1.desc">Bebida fría tradicional mallorquina, elaborada con almendra del Pla</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Café de tueste artesanal</p>
-                  <p class="menu-item__desc">Solo, cortado o con leche — en taza de cerámica local</p>
+                  <p class="menu-item__name" data-i18n="carta.c1.i2.name">Café de tueste artesanal</p>
+                  <p class="menu-item__desc" data-i18n="carta.c1.i2.desc">Solo, cortado o con leche — en taza de cerámica local</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Pa amb oli</p>
-                  <p class="menu-item__desc">Pan de payés tostado, aceite virgen extra, tomate de temporada</p>
+                  <p class="menu-item__name" data-i18n="carta.c1.i3.name">Pa amb oli</p>
+                  <p class="menu-item__desc" data-i18n="carta.c1.i3.desc">Pan de payés tostado, aceite virgen extra, tomate de temporada</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Ensaimada</p>
-                  <p class="menu-item__desc">Pastel mallorquín hojaldrado, ligero y esponjoso, recién horneado</p>
+                  <p class="menu-item__name" data-i18n="carta.c1.i4.name">Ensaimada</p>
+                  <p class="menu-item__desc" data-i18n="carta.c1.i4.desc">Pastel mallorquín hojaldrado, ligero y esponjoso, recién horneado</p>
                 </div>
               </div>
             </div>
@@ -388,24 +393,24 @@
           <!-- Variados -->
           <article class="menu-card dbezel reveal" data-delay="2" aria-label="Categoría: Variados">
             <div class="dbezel__core">
-              <p class="menu-card__cat" aria-hidden="true">Variados</p>
-              <h3 class="menu-card__title">Para compartir</h3>
+              <p class="menu-card__cat" aria-hidden="true" data-i18n="carta.c2.cat">Variados</p>
+              <h3 class="menu-card__title" data-i18n="carta.c2.title">Para compartir</h3>
               <div class="menu-items">
                 <div class="menu-item">
-                  <p class="menu-item__name">Variado mallorquín</p>
-                  <p class="menu-item__desc">Selección de croquetes, ensaladilla rusa y callos de la casa</p>
+                  <p class="menu-item__name" data-i18n="carta.c2.i1.name">Variado mallorquín</p>
+                  <p class="menu-item__desc" data-i18n="carta.c2.i1.desc">Selección de croquetes, ensaladilla rusa y callos de la casa</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Croquetes de la casa</p>
-                  <p class="menu-item__desc">Croquetas cremosas de jamón ibérico, rebozadas y fritas al momento</p>
+                  <p class="menu-item__name" data-i18n="carta.c2.i2.name">Croquetes de la casa</p>
+                  <p class="menu-item__desc" data-i18n="carta.c2.i2.desc">Croquetas cremosas de jamón ibérico, rebozadas y fritas al momento</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Ensaladilla rusa</p>
-                  <p class="menu-item__desc">Receta tradicional con patata, guisantes, zanahoria y mayonesa casera</p>
+                  <p class="menu-item__name" data-i18n="carta.c2.i3.name">Ensaladilla rusa</p>
+                  <p class="menu-item__desc" data-i18n="carta.c2.i3.desc">Receta tradicional con patata, guisantes, zanahoria y mayonesa casera</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Callos a la mallorquina</p>
-                  <p class="menu-item__desc">Con sobrasada, butifarra negra y las especias de siempre</p>
+                  <p class="menu-item__name" data-i18n="carta.c2.i4.name">Callos a la mallorquina</p>
+                  <p class="menu-item__desc" data-i18n="carta.c2.i4.desc">Con sobrasada, butifarra negra y las especias de siempre</p>
                 </div>
               </div>
             </div>
@@ -414,28 +419,28 @@
           <!-- Platos del día -->
           <article class="menu-card menu-card--featured dbezel reveal" data-delay="3" aria-label="Categoría: Platos del día">
             <div class="dbezel__core">
-              <p class="menu-card__cat" aria-hidden="true">Platos del día</p>
-              <h3 class="menu-card__title">De la cocina de mercado</h3>
+              <p class="menu-card__cat" aria-hidden="true" data-i18n="carta.c3.cat">Platos del día</p>
+              <h3 class="menu-card__title" data-i18n="carta.c3.title">De la cocina de mercado</h3>
               <div class="menu-items">
                 <div class="menu-item">
-                  <p class="menu-item__name">Sopa mallorquina</p>
-                  <p class="menu-item__desc">Sopas de pan con verduras de temporada y aceite de oliva virgen extra</p>
+                  <p class="menu-item__name" data-i18n="carta.c3.i1.name">Sopa mallorquina</p>
+                  <p class="menu-item__desc" data-i18n="carta.c3.i1.desc">Sopas de pan con verduras de temporada y aceite de oliva virgen extra</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Arroz brut</p>
-                  <p class="menu-item__desc">Arroz caldoso de caza, sobrasada, especias y setas silvestres</p>
+                  <p class="menu-item__name" data-i18n="carta.c3.i2.name">Arroz brut</p>
+                  <p class="menu-item__desc" data-i18n="carta.c3.i2.desc">Arroz caldoso de caza, sobrasada, especias y setas silvestres</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Caracoles en salsa</p>
-                  <p class="menu-item__desc">Caracoles de monte en tomate con hierbas aromáticas y picada</p>
+                  <p class="menu-item__name" data-i18n="carta.c3.i3.name">Caracoles en salsa</p>
+                  <p class="menu-item__desc" data-i18n="carta.c3.i3.desc">Caracoles de monte en tomate con hierbas aromáticas y picada</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Chipirones</p>
-                  <p class="menu-item__desc">A la plancha o en su tinta, con arroz blanco de acompañamiento</p>
+                  <p class="menu-item__name" data-i18n="carta.c3.i4.name">Chipirones</p>
+                  <p class="menu-item__desc" data-i18n="carta.c3.i4.desc">A la plancha o en su tinta, con arroz blanco de acompañamiento</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Escalope de ternera</p>
-                  <p class="menu-item__desc">Empanado, con patatas fritas o ensalada verde de temporada</p>
+                  <p class="menu-item__name" data-i18n="carta.c3.i5.name">Escalope de ternera</p>
+                  <p class="menu-item__desc" data-i18n="carta.c3.i5.desc">Empanado, con patatas fritas o ensalada verde de temporada</p>
                 </div>
               </div>
             </div>
@@ -444,20 +449,20 @@
           <!-- Postres -->
           <article class="menu-card dbezel reveal" data-delay="4" aria-label="Categoría: Postres">
             <div class="dbezel__core">
-              <p class="menu-card__cat" aria-hidden="true">Postres</p>
-              <h3 class="menu-card__title">Para cerrar bien</h3>
+              <p class="menu-card__cat" aria-hidden="true" data-i18n="carta.c4.cat">Postres</p>
+              <h3 class="menu-card__title" data-i18n="carta.c4.title">Para cerrar bien</h3>
               <div class="menu-items">
                 <div class="menu-item">
-                  <p class="menu-item__name">Tarta de manzana</p>
-                  <p class="menu-item__desc">Tarta casera de manzana caramelizada con canela y masa quebrada</p>
+                  <p class="menu-item__name" data-i18n="carta.c4.i1.name">Tarta de manzana</p>
+                  <p class="menu-item__desc" data-i18n="carta.c4.i1.desc">Tarta casera de manzana caramelizada con conela y masa quebrada</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Greixonera</p>
-                  <p class="menu-item__desc">Pudín mallorquín de ensaimada, huevo y azúcar — textura sedosa</p>
+                  <p class="menu-item__name" data-i18n="carta.c4.i2.name">Greixonera</p>
+                  <p class="menu-item__desc" data-i18n="carta.c4.i2.desc">Pudín mallorquín de ensaimada, huevo y azúcar — textura sedosa</p>
                 </div>
                 <div class="menu-item">
-                  <p class="menu-item__name">Helado artesanal</p>
-                  <p class="menu-item__desc">De almendra o higo según temporada, elaboración propia</p>
+                  <p class="menu-item__name" data-i18n="carta.c4.i3.name">Helado artesanal</p>
+                  <p class="menu-item__desc" data-i18n="carta.c4.i3.desc">De almendra o higo según temporada, elaboración propia</p>
                 </div>
               </div>
             </div>
@@ -475,8 +480,8 @@
       <div class="resenas__inner">
 
         <header class="resenas__header reveal">
-          <span class="eyebrow-badge">954 reseñas en Google</span>
-          <h2 class="resenas__title" id="resenas-h2">
+          <span class="eyebrow-badge" data-i18n="resenas.eyebrow">954 reseñas en Google</span>
+          <h2 class="resenas__title" id="resenas-h2" data-i18n="resenas.title">
             Lo que dicen quienes comen aquí
           </h2>
           <p class="resenas__meta">
@@ -489,6 +494,7 @@
             </span>
             4,5 sobre 5 · Media de 954 opiniones
           </p>
+          <div class="scroll-hint-mobile" aria-hidden="true" data-i18n="scroll.hint">Desliza para ver más →</div>
         </header>
 
         <div class="resenas__grid">
@@ -496,7 +502,7 @@
           <article class="resena-card dbezel reveal" data-delay="1" aria-label="Reseña de visitante">
             <div class="dbezel__core">
               <span class="resena-card__mark" aria-hidden="true">"</span>
-              <p class="resena-card__text">
+              <p class="resena-card__text" data-i18n="resenas.r1.text">
                 El trato del personal es de diez. La comida mallorquina de toda
                 la vida, con ingredientes frescos y raciones que de verdad
                 sacian. El arroz brut estaba espectacular. Un sitio que no
@@ -505,8 +511,8 @@
               <div class="resena-card__user">
                 <div class="resena-card__avatar">M</div>
                 <div>
-                  <span class="resena-card__author">Maria García</span>
-                  <span class="resena-card__date">Hace 2 semanas</span>
+                  <p class="resena-card__author" data-i18n="resenas.r1.author">Maria García</p>
+                  <span class="resena-card__date" data-i18n="resenas.r1.date">Hace 2 semanas</span>
                 </div>
               </div>
               <footer class="resena-card__footer">
@@ -524,7 +530,7 @@
           <article class="resena-card dbezel reveal" data-delay="2" aria-label="Reseña de visitante">
             <div class="dbezel__core">
               <span class="resena-card__mark" aria-hidden="true">"</span>
-              <p class="resena-card__text">
+              <p class="resena-card__text" data-i18n="resenas.r2.text">
                 Llevamos años parando aquí en nuestras rutas en bici por
                 Mallorca. Terraza preciosa con vistas al campo y la montaña.
                 La sopa mallorquina y los caracoles son de los mejores que hemos
@@ -533,8 +539,8 @@
               <div class="resena-card__user">
                 <div class="resena-card__avatar">J</div>
                 <div>
-                  <span class="resena-card__author">Joan Perelló</span>
-                  <span class="resena-card__date">Hace 1 mes</span>
+                  <p class="resena-card__author" data-i18n="resenas.r2.author">Joan Perelló</p>
+                  <span class="resena-card__date" data-i18n="resenas.r2.date">Hace 1 mes</span>
                 </div>
               </div>
               <footer class="resena-card__footer">
@@ -552,17 +558,17 @@
           <article class="resena-card dbezel reveal" data-delay="3" aria-label="Reseña de visitante">
             <div class="dbezel__core">
               <span class="resena-card__mark" aria-hidden="true">"</span>
-              <p class="resena-card__text">
+              <p class="resena-card__text" data-i18n="resenas.r3.text">
                 Un restaurante de pueblo auténtico y absolutamente delicioso.
                 El granizado de almendra es el mejor que he tomado en mi vida.
                 La tarta de manzana casera, para repetir. Una joya que los de
                 fuera deberíamos conocer más.
               </p>
               <div class="resena-card__user">
-                <div class="resena-card__avatar">L</div>
+                <div class="resena-card__avatar">P</div>
                 <div>
-                  <span class="resena-card__author">Llucia Munar</span>
-                  <span class="resena-card__date">Hace 3 días</span>
+                  <p class="resena-card__author" data-i18n="resenas.r3.author">Paris Yo Producciones</p>
+                  <span class="resena-card__date" data-i18n="resenas.r3.date">Hace 3 días</span>
                 </div>
               </div>
               <footer class="resena-card__footer">
@@ -595,7 +601,7 @@
 
         <div class="instagram-embed-wrap reveal" data-delay="2">
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFpuLU0NWQQ/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-          <script async src="//www.instagram.com/embed.js"></script>
+          <script async src="https://www.instagram.com/embed.js"></script>
         </div>
       </div>
     </section>
@@ -608,8 +614,8 @@
       <div class="contacto__inner">
 
         <header class="contacto__header reveal">
-          <span class="eyebrow-badge">Visítanos</span>
-          <h2 class="contacto__title" id="contacto-h2">
+          <span class="eyebrow-badge" data-i18n="contacto.eyebrow">Visítanos</span>
+          <h2 class="contacto__title" id="contacto-h2" data-i18n="contacto.title">
             Estamos en el centro de Mallorca
           </h2>
         </header>
@@ -620,14 +626,14 @@
           <div class="contacto__info reveal" data-delay="1">
 
             <div class="info-row">
-              <p class="info-row__label">Dirección</p>
+              <p class="info-row__label" data-i18n="contacto.label.address">Dirección</p>
               <address class="info-row__value">
                 Carrer de S'Arraval, 8<br>07210 Algaida, Mallorca
               </address>
             </div>
 
             <div class="info-row">
-              <p class="info-row__label">Teléfono</p>
+              <p class="info-row__label" data-i18n="contacto.label.phone">Teléfono</p>
               <p class="info-row__value">
                 <a href="tel:+34971668082" aria-label="Llamar a Sa Raval al número +34 971 66 80 82">
                   +34 971 66 80 82
@@ -636,15 +642,15 @@
             </div>
 
             <div class="info-row">
-              <p class="info-row__label">Horario</p>
+              <p class="info-row__label" data-i18n="contacto.label.schedule">Horario</p>
               <dl class="horario info-row__value">
-                <dt>Lunes</dt>    <dd>08:30 – 16:00</dd>
-                <dt>Martes</dt>   <dd>08:30 – 16:00</dd>
-                <dt>Miércoles</dt><dd>08:30 – 16:00</dd>
-                <dt>Jueves</dt>   <dd>08:30 – 16:00</dd>
-                <dt>Viernes</dt>  <dd>08:30 – 16:00</dd>
-                <dt>Sábado</dt>   <dd>08:30 – 16:00</dd>
-                <dt>Domingo</dt>  <dd class="cerrado">Cerrado</dd>
+                <dt data-i18n="dias.lunes">Lunes</dt>    <dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.martes">Martes</dt>   <dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.miercoles">Miércoles</dt><dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.jueves">Jueves</dt>   <dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.viernes">Viernes</dt>  <dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.sabado">Sábado</dt>   <dd>08:30 – 16:00</dd>
+                <dt data-i18n="dias.domingo">Domingo</dt>  <dd class="cerrado" data-i18n="horario.cerrado">Cerrado</dd>
               </dl>
             </div>
 
@@ -668,13 +674,15 @@
                 class="btn-pill"
                 aria-label="Llamar para reservar mesa en Sa Raval"
               >
-                Llamar y reservar
+                <span data-i18n="contacto.cta_call">Llamar y reservar</span>
                 <span class="btn-pill__arrow" aria-hidden="true">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
                 </span>
               </a>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=39.5652771,2.8966474"
+                href="https://www.google.com/maps/place/Sa+Raval/@39.5652771,2.8966474,17z/data=!3m1!4b1!4m6!3m5!1s0x1297d266e7683935:0x5e56e4c76b976f9c!8m2!3d39.5652771!4d2.8992223!16s%2Fg%2F11b66k0f8z"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-ghost"
@@ -691,7 +699,7 @@
           <div class="map-shell reveal" data-delay="2">
             <div class="map-core">
               <iframe
-                src="https://maps.google.com/maps?q=39.5652771,2.8966474&z=16&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.5670868102434!2d2.8966474!3d39.5652771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297d266e7683935%3A0x5e56e4c76b976f9c!2sSa%20Raval!5e0!3m2!1ses!2ses!4v1739818816555!5m2!1ses!2ses"
                 title="Ubicación de Sa Raval en Algaida, Mallorca"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -718,8 +726,10 @@
       <div class="footer__top">
 
         <div class="footer__brand">
-          <p class="footer__brand-name">Sa <em>Raval</em></p>
-          <p class="footer__brand-tag">Cuina mallorquina de mercat · Algaida</p>
+          <p class="footer__brand-name">
+            Sa <em>Raval</em> <img src="img/TrevorDefi.png" alt="" width="24" height="24" style="display:inline-block; vertical-align: middle; margin-left: 4px; object-fit: contain;" aria-hidden="true" onerror="this.style.display='none'">
+          </p>
+          <p class="footer__brand-tag" data-i18n="footer.tagline">Cuina mallorquina de mercat · Algaida</p>
         </div>
 
         <nav class="footer__nav" aria-label="Links del pie de página">
@@ -729,23 +739,23 @@
             rel="noopener noreferrer"
             aria-label="Instagram de Sa Raval"
           >Instagram</a>
-          <a href="tel:+34971668082" aria-label="Llamar para reservar">Reservas</a>
+          <a href="tel:+34971668082" aria-label="Llamar para reservar" data-i18n="footer.reservas">Reservas</a>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=39.5652771,2.8966474"
+            href="https://www.google.com/maps/place/Sa+Raval/@39.5652771,2.8966474,17z/data=!3m1!4b1!4m6!3m5!1s0x1297d266e7683935:0x5e56e4c76b976f9c!8m2!3d39.5652771!4d2.8992223!16s%2Fg%2F11b66k0f8z"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Abrir en Google Maps"
           >Google Maps</a>
-          <a href="#filosofia">Filosofía</a>
-          <a href="#carta">Carta</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#filosofia" data-i18n="nav.filosofia">Filosofía</a>
+          <a href="#carta" data-i18n="nav.carta">Carta</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </nav>
 
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copy">© 2025 Sa Raval · Algaida, Mallorca</p>
-        <address class="footer__addr">Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82</address>
+        <p class="footer__copy" data-i18n="footer.copy">© 2025 Sa Raval · Algaida, Mallorca</p>
+        <address class="footer__addr" data-i18n="footer.address">Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82</address>
       </div>
 
     </div>
@@ -819,50 +829,238 @@
     /* --- Translations --- */
     const translations = {
       es: {
-        "nav.filosofia": "Filosofía",
-        "nav.carta": "Carta",
-        "nav.resenas": "Reseñas",
-        "nav.contacto": "Cómo llegar",
-        "nav.reservar": "Reservar",
-        "social.title": "Momentos en Sa Raval",
-        "social.subtitle": "Descubre el día a día de nuestra cocina"
+        "scroll.hint": "Desliza para ver más →",
+        "meta.title": "Sa Raval · Cocina mallorquina de mercado en Algaida",
+        "meta.desc": "Restaurante Sa Raval en Algaida, Mallorca. Cocina tradicional mallorquina de mercado: sopa mallorquina, arroz brut, caracoles. Lunes a sábado, 08:30–16:00. +34 971 66 80 82",
+        "nav.filosofia": "Filosofía", "nav.carta": "Carta", "nav.resenas": "Reseñas", "nav.contacto": "Cómo llegar", "nav.reservar": "Reservar",
+        "hero.sup": "Algaida · Mallorca · Desde siempre", "hero.tagline": "Cuina mallorquina de mercat · Algaida", "hero.cta_call": "Llamar para reservar", "hero.cta_menu": "Ver la carta",
+        "hero.stats.rating": "Google rating", "hero.stats.reviews": "Reseñas", "hero.stats.price": "Por persona",
+        "filosofia.eyebrow": "Nuestra manera de cocinar", "filosofia.title": "El sabor honesto de Mallorca",
+        "filosofia.p1": "En Sa Raval cada plato empieza en el mercado de Algaida. Elegimos los mejores ingredientes de temporada, los de los productores que conocemos por su nombre, y los cocinamos como se han cocinado siempre en esta isla.",
+        "filosofia.p2": "La sopa mallorquina, el arroz brut, los caracoles o los chipirones no son platos de menú — son la memoria gastronómica de Mallorca.",
+        "filosofia.p3": "Raciones generosas, precios honestos y el trato de siempre. Eso es Sa Raval.",
+        "filosofia.quote": "\"Una joya culinaria del centro de Mallorca. Cocina de toda la vida, ingredientes frescos y un trato que ya no se ve en muchos sitios.\"",
+        "filosofia.h1.title": "Mercat local", "filosofia.h1.desc": "Ingredientes frescos de temporada, directos de productores locales.",
+        "filosofia.h2.title": "Tradición sin atajos", "filosofia.h2.desc": "Recetas mallorquinas de siempre, cocinadas con el tiempo que necesitan.",
+        "filosofia.h3.title": "Trato excepcional", "filosofia.h3.desc": "Mencionado en más del 90 % de las reseñas. No es suerte, es vocación.",
+        "filosofia.h4.title": "Terraza con vistas", "filosofia.h4.desc": "Come con el campo y la Serra de Tramuntana de fondo.",
+        "filosofia.h5.title": "El trébol de tres hojas", "filosofia.h5.desc": "Símbolo de esperanza, fortuna y conexión con la tierra. Nuestros tres pilares.",
+        "carta.eyebrow": "Lo que cocinamos", "carta.title": "Nuestra carta", "carta.subtitle": "Cocina de temporada · La carta varía según el mercado",
+        "carta.c1.cat": "Desayunos & Café", "carta.c1.title": "Para empezar el día",
+        "carta.c1.i1.name": "Granizado de almendra", "carta.c1.i1.desc": "Bebida fría tradicional con almendra del Pla",
+        "carta.c1.i2.name": "Café de tueste artesanal", "carta.c1.i2.desc": "Solo, cortado o con leche — taza cerámica local",
+        "carta.c1.i3.name": "Pa amb oli", "carta.c1.i3.desc": "Pan de payés tostado, aceite virgen extra, tomate",
+        "carta.c1.i4.name": "Ensaimada", "carta.c1.i4.desc": "Pastel mallorquín hojaldrado, ligero y esponjoso",
+        "carta.c2.cat": "Variados", "carta.c2.title": "Para compartir",
+        "carta.c2.i1.name": "Variado mallorquín", "carta.c2.i1.desc": "Selección de croquetes, ensaladilla y callos",
+        "carta.c2.i2.name": "Croquetes de la casa", "carta.c2.i2.desc": "Cremoses de jamón ibérico, fritas al momento",
+        "carta.c2.i3.name": "Ensaladilla rusa", "carta.c2.i3.desc": "Receta tradicional con mayonesa casera",
+        "carta.c2.i4.name": "Callos a la mallorquina", "carta.c2.i4.desc": "Con sobrasada, butifarra negra y especias",
+        "carta.c3.cat": "Platos del día", "carta.c3.title": "De la cocina de mercado",
+        "carta.c3.i1.name": "Sopa mallorquina", "carta.c3.i1.desc": "Sopas de pan con verduras de temporada",
+        "carta.c3.i2.name": "Arroz brut", "carta.c3.i2.desc": "Arroz caldoso de caza, sobrasada y setas",
+        "carta.c3.i3.name": "Caracoles en salsa", "carta.c3.i3.desc": "Caracoles de monte en tomate con hierbas",
+        "carta.c3.i4.name": "Chipirones", "carta.c3.i4.desc": "A la plancha o en su tinta con arroz blanco",
+        "carta.c3.i5.name": "Escalope de ternera", "carta.c3.i5.desc": "Empanado con patatas o ensalada verde",
+        "carta.c4.cat": "Postres", "carta.c4.title": "Para cerrar bien",
+        "carta.c4.i1.name": "Tarta de manzana", "carta.c4.i1.desc": "Casera caramelizada con canela y masa quebrada",
+        "carta.c4.i2.name": "Greixonera", "carta.c4.i2.desc": "Pudín mallorquín de ensaimada y huevo",
+        "carta.c4.i3.name": "Helado artesanal", "carta.c4.i3.desc": "De almendra o higo según temporada",
+        "resenas.eyebrow": "954 reseñas en Google", "resenas.title": "Lo que dicen nuestros clientes",
+        "resenas.r1.text": "El trato del personal es de diez. La comida mallorquina de toda la vida, con ingredientes frescos. El arroz brut espectacular.",
+        "resenas.r1.author": "Maria García", "resenas.r1.date": "Hace 2 semanas",
+        "resenas.r2.text": "Llevamos años parando aquí. Terraza preciosa. La sopa mallorquina y los caracoles son de los mejores.",
+        "resenas.r2.author": "Joan Perelló", "resenas.r2.date": "Hace 1 mes",
+        "resenas.r3.text": "Un restaurante de pueblo auténtico. El granizado de almendra es el mejor que he tomado.",
+        "resenas.r3.author": "Llucia Munar", "resenas.r3.date": "Hace 3 días",
+        "social.title": "Momentos en Sa Raval", "social.subtitle": "Descubre el día a día de nuestra cocina",
+        "contacto.eyebrow": "Visítanos", "contacto.title": "Estamos en el centro de Mallorca",
+        "contacto.label.address": "Dirección", "contacto.label.phone": "Teléfono", "contacto.label.schedule": "Horario",
+        "dias.lunes": "Lunes", "dias.martes": "Martes", "dias.miercoles": "Miércoles", "dias.jueves": "Jueves", "dias.viernes": "Viernes", "dias.sabado": "Sábado", "dias.domingo": "Domingo",
+        "horario.cerrado": "Cerrado", "contacto.cta_call": "Llamar y reservar",
+        "footer.tagline": "Cuina mallorquina de mercat · Algaida", "footer.reservas": "Reservas", "footer.copy": "© 2025 Sa Raval · Algaida, Mallorca",
+        "footer.address": "Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82"
       },
       ca: {
-        "nav.filosofia": "Filosofia",
-        "nav.carta": "Carta",
-        "nav.resenas": "Ressenyes",
-        "nav.contacto": "Com arribar",
-        "nav.reservar": "Reservar",
-        "social.title": "Moments a Sa Raval",
-        "social.subtitle": "Descobreix el dia a dia de la nostra cuina"
+        "scroll.hint": "Desllisa per veure més →",
+        "meta.title": "Sa Raval · Cuina mallorquina de mercat a Algaida",
+        "meta.desc": "Restaurant Sa Raval a Algaida, Mallorca. Cuina tradicional mallorquina de mercat: sopes, arròs brut, caragols. Dilluns a dissabte, 08:30–16:00.",
+        "nav.filosofia": "Filosofia", "nav.carta": "Carta", "nav.resenas": "Ressenyes", "nav.contacto": "Com arribar", "nav.reservar": "Reservar",
+        "hero.sup": "Algaida · Mallorca · Des de sempre", "hero.tagline": "Cuina mallorquina de mercat · Algaida", "hero.cta_call": "Trucar per reservar", "hero.cta_menu": "Veure la carta",
+        "hero.stats.rating": "Google rating", "hero.stats.reviews": "Ressenyes", "hero.stats.price": "Per persona",
+        "filosofia.eyebrow": "La nostra manera de cuinar", "filosofia.title": "El sabor honest de Mallorca",
+        "filosofia.p1": "A Sa Raval cada plat comença al mercat d'Algaida. Triem els millors ingredients de temporada, els dels productors que coneixem pel seu nom, i els cuinem com s'han cuinat sempre.",
+        "filosofia.p2": "La sopa mallorquina, l'arròs brut, els caragols o les sípies no són plats de menú — són la memòria gastronòmica de Mallorca.",
+        "filosofia.p3": "Racions generoses, preus honestos i el tracte de sempre. Això és Sa Raval.",
+        "filosofia.quote": "\"Una joia culinària del centre de Mallorca. Cuina de tota la vida, ingredients frescos i un tracte que ja no es veu.\"",
+        "filosofia.h1.title": "Mercat local", "filosofia.h1.desc": "Ingredients frescos de temporada, directes de productors locals.",
+        "filosofia.h2.title": "Tradició sense dreceres", "filosofia.h2.desc": "Receptes mallorquines de sempre, cuinades amb el temps que necessiten.",
+        "filosofia.h3.title": "Tracte excepcional", "filosofia.h3.desc": "Esmentat en més del 90 % de les ressenyes. No és sort, és vocació.",
+        "filosofia.h4.title": "Terrassa amb vistes", "filosofia.h4.desc": "Menja amb el camp i la Serra de Tramuntana de fons.",
+        "filosofia.h5.title": "El trèvol de tres fulles", "filosofia.h5.desc": "Símbol d'esperança, fortuna i connexió amb la terra. Els nostres tres pilars.",
+        "carta.eyebrow": "El que cuinem", "carta.title": "La nostra carta", "carta.subtitle": "Cuina de temporada · La carta varia segons el mercat",
+        "carta.c1.cat": "Esmorzars & Cafè", "carta.c1.title": "Per començar el dia",
+        "carta.c1.i1.name": "Granissat d'atmetlla", "carta.c1.i1.desc": "Beguda freda tradicional amb atmetlla del Pla",
+        "carta.c1.i2.name": "Cafè de torrat artesanal", "carta.c1.i2.desc": "Sol, tallat o amb llet — tassa ceràmica local",
+        "carta.c1.i3.name": "Pa amb oli", "carta.c1.i3.desc": "Pa de pagès torrat, oli verge extra, tomàquet",
+        "carta.c1.i4.name": "Ensaïmada", "carta.c1.i4.desc": "Pastís mallorquí fullat, lleuger i esponjós",
+        "carta.c2.cat": "Variats", "carta.c2.title": "Per compartir",
+        "carta.c2.i1.name": "Variat mallorquí", "carta.c2.i1.desc": "Selecció de croquetes, ensaladilla i callos",
+        "carta.c2.i2.name": "Croquetes de la casa", "carta.c2.i2.desc": "Cremoses de pernil ibèric, fregides al moment",
+        "carta.c2.i3.name": "Ensaladilla russa", "carta.c2.i3.desc": "Recepta tradicional amb maionesa casolana",
+        "carta.c2.i4.name": "Callos a la mallorquina", "carta.c2.i4.desc": "Amb sobrassada, botifarró i espècies",
+        "carta.c3.cat": "Plats del dia", "carta.c3.title": "De la cuina de mercat",
+        "carta.c3.i1.name": "Sopa mallorquina", "carta.c3.i1.desc": "Sopes de pa amb verdures de temporada",
+        "carta.c3.i2.name": "Arròs brut", "carta.c3.i2.desc": "Arròs caldós de caça, sobrassada i esclata-sangs",
+        "carta.c3.i3.name": "Caragols en salsa", "carta.c3.i3.desc": "Caragols de muntanya amb tomàquet i herbes",
+        "carta.c3.i4.name": "Sípies", "carta.c3.i4.desc": "A la planxa o en la seva tinta amb arròs blanc",
+        "carta.c3.i5.name": "Escalopa de vedella", "carta.c3.i5.desc": "Arrebossada amb patates o amanida verda",
+        "carta.c4.cat": "Postres", "carta.c4.title": "Per tancar bé",
+        "carta.c4.i1.name": "Pastís de poma", "carta.c4.i1.desc": "Casolà caramel·litzat amb canella i massa quebrada",
+        "carta.c4.i2.name": "Greixonera", "carta.c4.i2.desc": "Pudín mallorquí d'ensaïmada i ou",
+        "carta.c4.i3.name": "Gelat artesanal", "carta.c4.i3.desc": "D'atmetlla o figa segons temporada",
+        "resenas.eyebrow": "954 ressenyes a Google", "resenas.title": "El que diuen els nostres clients",
+        "resenas.r1.text": "El tracte del personal és de deu. El menjar mallorquí de tota la vida, amb ingredients frescos. L'arròs brut espectacular.",
+        "resenas.r1.author": "Maria García", "resenas.r1.date": "Fa 2 setmanes",
+        "resenas.r2.text": "Portem anys parant aquí. Terrassa preciosa. La sopa mallorquina i els caragols són dels millors.",
+        "resenas.r2.author": "Joan Perelló", "resenas.r2.date": "Fa 1 mes",
+        "resenas.r3.text": "Un restaurant de poble autèntic. El granissat d'atmetlla és el millor que he pres mai.",
+        "resenas.r3.author": "Llucia Munar", "resenas.r3.date": "Fa 3 dies",
+        "social.title": "Moments a Sa Raval", "social.subtitle": "Descobreix el dia a dia de la nostra cuina",
+        "contacto.eyebrow": "Visita'ns", "contacto.title": "Estem al centre de Mallorca",
+        "contacto.label.address": "Adreça", "contacto.label.phone": "Telèfon", "contacto.label.schedule": "Horari",
+        "dias.lunes": "Dilluns", "dias.martes": "Dimarts", "dias.miercoles": "Dimecres", "dias.jueves": "Dijous", "dias.viernes": "Divendres", "dias.sabado": "Dissabte", "dias.domingo": "Diumenge",
+        "horario.cerrado": "Tancat", "contacto.cta_call": "Trucar i reservar",
+        "footer.tagline": "Cuina mallorquina de mercat · Algaida", "footer.reservas": "Reserves", "footer.copy": "© 2025 Sa Raval · Algaida, Mallorca",
+        "footer.address": "Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82"
       },
       de: {
-        "nav.filosofia": "Philosophie",
-        "nav.carta": "Speisekarte",
-        "nav.resenas": "Bewertungen",
-        "nav.contacto": "Anfahrt",
-        "nav.reservar": "Reservieren",
-        "social.title": "Momente im Sa Raval",
-        "social.subtitle": "Entdecken Sie den Alltag unserer Küche"
+        "scroll.hint": "Wischen, um mehr zu sehen →",
+        "meta.title": "Sa Raval · Mallorquinische Marktküche in Algaida",
+        "meta.desc": "Restaurant Sa Raval in Algaida, Mallorca. Traditionelle mallorquinische Marktküche: Mallorquinische Suppe, Arroz Brut, Schnecken. Montag bis Samstag, 08:30–16:00.",
+        "nav.filosofia": "Philosophie", "nav.carta": "Karte", "nav.resenas": "Bewertungen", "nav.contacto": "Anfahrt", "nav.reservar": "Reservieren",
+        "hero.sup": "Algaida · Mallorca · Seit immer", "hero.tagline": "Mallorquinische Marktküche · Algaida", "hero.cta_call": "Anrufen & reservieren", "hero.cta_menu": "Speisekarte",
+        "hero.stats.rating": "Google rating", "hero.stats.reviews": "Bewertungen", "hero.stats.price": "Pro Person",
+        "filosofia.eyebrow": "Unsere Art zu kochen", "filosofia.title": "Der ehrliche Geschmack Mallorcas",
+        "filosofia.p1": "Im Sa Raval beginnt jedes Gericht auf dem Markt von Algaida. Wir wählen die besten saisonalen Zutaten von lokalen Produzenten.",
+        "filosofia.p2": "Mallorquinische Suppe, Arroz Brut, Schnecken oder Chipirones — das ist das gastronomische Erbe Mallorcas.",
+        "filosofia.p3": "Großzügige Portionen, faire Preise und herzlicher Service. Das ist Sa Raval.",
+        "filosofia.quote": "\"Ein kulinarisches Juwel im Zentrum Mallorcas. Ehrliche Küche, frische Zutaten und ein Service, den man heute selten findet.\"",
+        "filosofia.h1.title": "Lokaler Markt", "filosofia.h1.desc": "Frische saisonale Zutaten, direkt von lokalen Erzeugern.",
+        "filosofia.h2.title": "Tradition pur", "filosofia.h2.desc": "Mallorquinische Rezepte, mit viel Liebe und Zeit zubereitet.",
+        "filosofia.h3.title": "Exzellenter Service", "filosofia.h3.desc": "In über 90 % der Bewertungen gelobt. Unsere wahre Berufung.",
+        "filosofia.h4.title": "Terrasse mit Ausblick", "filosofia.h4.desc": "Speisen Sie mit Blick auf das Land und das Tramuntana-Gebirge.",
+        "filosofia.h5.title": "Dreiblättriges Kleeblatt", "filosofia.h5.desc": "Symbol für Hoffnung und Glück. Unsere drei Grundpfeiler.",
+        "carta.eyebrow": "Was wir kochen", "carta.title": "Unsere Karte", "carta.subtitle": "Saisonale Küche · Die Karte variiert täglich",
+        "carta.c1.cat": "Frühstück & Kaffee", "carta.c1.title": "Start in den Tag",
+        "carta.c1.i1.name": "Mandeleis-Granita", "carta.c1.i1.desc": "Traditionelles mallorquinisches Kaltgetränk",
+        "carta.c1.i2.name": "Handgerösteter Kaffee", "carta.c1.i2.desc": "Solo, Cortado oder Milchkaffee — lokale Keramik",
+        "carta.c1.i3.name": "Pa amb oli", "carta.c1.i3.desc": "Bauernbrot, Olivenöl extra vergine, Tomaten",
+        "carta.c1.i4.name": "Ensaimada", "carta.c1.i4.desc": "Mallorquinisches Gebäck, fluffig und frisch",
+        "carta.c2.cat": "Variados", "carta.c2.title": "Zum Teilen",
+        "carta.c2.i1.name": "Mallorca Variation", "carta.c2.i1.desc": "Kroketten, russischer Salat und Kutteln",
+        "carta.c2.i2.name": "Hausgemachte Kroketten", "carta.c2.i2.desc": "Cremig mit Serrano-Schinken, frisch frittiert",
+        "carta.c2.i3.name": "Russischer Salat", "carta.c2.i3.desc": "Traditionelles Rezept mit hausgemachter Mayonnaise",
+        "carta.c2.i4.name": "Kutteln Mallorca-Art", "carta.c2.i4.desc": "Mit Sobrasada, Blutwurst und Gewürzen",
+        "carta.c3.cat": "Tagesgerichte", "carta.c3.title": "Aus der Marktküche",
+        "carta.c3.i1.name": "Mallorquinische Suppe", "carta.c3.i1.desc": "Brotsuppe mit frischem Saisongemüse",
+        "carta.c3.i2.name": "Arroz brut", "carta.c3.i2.desc": "Würziger Reis mit Fleisch, Sobrasada und Pilzen",
+        "carta.c3.i3.name": "Schnecken in Sauce", "carta.c3.i3.desc": "Bergschnecken in Tomatensauce mit Kräutern",
+        "carta.c3.i4.name": "Chipirones", "carta.c3.i4.desc": "Gegrillt oder in Tinte mit weißem Reis",
+        "carta.c3.i5.name": "Kalbsschnitzel", "carta.c3.i5.desc": "Paniert mit Pommes oder grünem Salat",
+        "carta.c4.cat": "Desserts", "carta.c4.title": "Süßer Abschluss",
+        "carta.c4.i1.name": "Apfelkuchen", "carta.c4.i1.desc": "Hausgemacht, karamellisiert mit Zimt",
+        "carta.c4.i2.name": "Greixonera", "carta.c4.i2.desc": "Mallorquinischer Pudding aus Ensaimada",
+        "carta.c4.i3.name": "Handgemachtes Eis", "carta.c4.i3.desc": "Mandel oder Feige, je nach Saison",
+        "resenas.eyebrow": "954 Google-Bewertungen", "resenas.title": "Das sagen unsere Gäste",
+        "resenas.r1.text": "Erstklassiger Service. Traditionelle mallorquinische Küche mit frischen Zutaten. Arroz Brut war spitze.",
+        "resenas.r1.author": "Maria García", "resenas.r1.date": "Vor 2 Wochen",
+        "resenas.r2.text": "Wir halten hier seit Jahren. Wunderschöne Terrasse. Die Suppe und die Schnecken sind top.",
+        "resenas.r2.author": "Joan Perelló", "resenas.r2.date": "Vor 1 Monat",
+        "resenas.r3.text": "Ein authentisches Dorfrestaurant. Die Mandel-Granita ist die beste, die ich je hatte.",
+        "resenas.r3.author": "Llucia Munar", "resenas.r3.date": "Vor 3 Tagen",
+        "social.title": "Momente im Sa Raval", "social.subtitle": "Entdecken Sie den Alltag unserer Küche",
+        "contacto.eyebrow": "Besuchen Sie uns", "contacto.title": "Im Herzen Mallorcas",
+        "contacto.label.address": "Adresse", "contacto.label.phone": "Telefon", "contacto.label.schedule": "Zeiten",
+        "dias.lunes": "Montag", "dias.martes": "Dienstag", "dias.miercoles": "Mittwoch", "dias.jueves": "Donnerstag", "dias.viernes": "Freitag", "dias.sabado": "Samstag", "dias.domingo": "Sonntag",
+        "horario.cerrado": "Geschlossen", "contacto.cta_call": "Anrufen & buchen",
+        "footer.tagline": "Marktküche aus Mallorca · Algaida", "footer.reservas": "Reservieren", "footer.copy": "© 2025 Sa Raval · Algaida",
+        "footer.address": "Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82"
       },
       en: {
-        "nav.filosofia": "Philosophy",
-        "nav.carta": "Menu",
-        "nav.resenas": "Reviews",
-        "nav.contacto": "Directions",
-        "nav.reservar": "Book Table",
-        "social.title": "Moments at Sa Raval",
-        "social.subtitle": "Discover the daily life of our kitchen"
+        "scroll.hint": "Swipe to see more →",
+        "meta.title": "Sa Raval · Mallorcan Market Kitchen in Algaida",
+        "meta.desc": "Sa Raval Restaurant in Algaida, Mallorca. Traditional Mallorcan market cuisine: Mallorcan soup, arroz brut, snails. Monday to Saturday, 08:30–16:00.",
+        "nav.filosofia": "Philosophy", "nav.carta": "Menu", "nav.resenas": "Reviews", "nav.contacto": "Directions", "nav.reservar": "Book Table",
+        "hero.sup": "Algaida · Mallorca · Always", "hero.tagline": "Mallorcan market kitchen · Algaida", "hero.cta_call": "Call to book", "hero.cta_menu": "View menu",
+        "hero.stats.rating": "Google rating", "hero.stats.reviews": "Reviews", "hero.stats.price": "Per person",
+        "filosofia.eyebrow": "Our way of cooking", "filosofia.title": "The honest taste of Mallorca",
+        "filosofia.p1": "At Sa Raval every dish starts at the Algaida market. We choose the best seasonal ingredients from local producers.",
+        "filosofia.p2": "Mallorcan soup, Arroz Brut, snails or baby squid — these are the gastronomic memory of Mallorca.",
+        "filosofia.p3": "Generous portions, honest prices and the usual friendly service. That's Sa Raval.",
+        "filosofia.quote": "\"A culinary gem in the center of Mallorca. Traditional cooking, fresh ingredients and a service you don't see anymore.\"",
+        "filosofia.h1.title": "Local market", "filosofia.h1.desc": "Fresh seasonal ingredients, direct from local producers.",
+        "filosofia.h2.title": "Tradition pure", "filosofia.h2.desc": "Traditional Mallorcan recipes, cooked with the time they need.",
+        "filosofia.h3.title": "Exceptional service", "filosofia.h3.desc": "Mentioned in over 90% of reviews. It's our true calling.",
+        "filosofia.h4.title": "Terrace with a view", "filosofia.h4.desc": "Dine with the countryside and Tramuntana mountains as a backdrop.",
+        "filosofia.h5.title": "Three-leaf clover", "filosofia.h5.desc": "Symbol of hope, fortune and connection with the land. Our three pillars.",
+        "carta.eyebrow": "What we cook", "carta.title": "Our menu", "carta.subtitle": "Seasonal kitchen · The menu varies daily",
+        "carta.c1.cat": "Breakfast & Coffee", "carta.c1.title": "Start your day",
+        "carta.c1.i1.name": "Almond granita", "carta.c1.i1.desc": "Traditional Mallorcan cold drink with local almonds",
+        "carta.c1.i2.name": "Artisan roast coffee", "carta.c1.i2.desc": "Solo, Cortado or with milk — local ceramic cup",
+        "carta.c1.i3.name": "Pa amb oli", "carta.c1.i3.desc": "Toasted farmhouse bread, extra virgin oil, tomato",
+        "carta.c1.i4.name": "Ensaimada", "carta.c1.i4.desc": "Mallorcan flaky pastry, light and fluffy",
+        "carta.c2.cat": "Variados", "carta.c2.title": "To share",
+        "carta.c2.i1.name": "Mallorcan variety", "carta.c2.i1.desc": "Selection of croquettes, salad and tripe",
+        "carta.c2.i2.name": "Homemade croquettes", "carta.c2.i2.desc": "Creamy Iberian ham croquettes, freshly fried",
+        "carta.c2.i3.name": "Russian salad", "carta.c2.i3.desc": "Traditional recipe with homemade mayonnaise",
+        "carta.c2.i4.name": "Mallorcan-style tripe", "carta.c2.i4.desc": "With sobrasada, black pudding and spices",
+        "carta.c3.cat": "Daily specials", "carta.c3.title": "From the market",
+        "carta.c3.i1.name": "Mallorcan soup", "carta.c3.i1.desc": "Bread soups with seasonal vegetables",
+        "carta.c3.i2.name": "Arroz brut", "carta.c3.i2.desc": "Würziger Rice with game meat, sobrasada and mushrooms",
+        "carta.c3.i3.name": "Snails in sauce", "carta.c3.i3.desc": "Mountain snails in tomato sauce with herbs",
+        "carta.c3.i4.name": "Baby squid", "carta.c3.i4.desc": "Grilled or in its own ink with white rice",
+        "carta.c3.i5.name": "Veal escalope", "carta.c3.i5.desc": "Breaded with fries or seasonal green salad",
+        "carta.c4.cat": "Desserts", "carta.c4.title": "Sweet finish",
+        "carta.c4.i1.name": "Apple pie", "carta.c4.i1.desc": "Homemade caramelized apple pie with cinnamon",
+        "carta.c4.i2.name": "Greixonera", "carta.c4.i2.desc": "Mallorcan pudding made from Ensaimada",
+        "carta.c4.i3.name": "Artisan ice cream", "carta.c4.i3.desc": "Almond or fig depending on the season",
+        "resenas.eyebrow": "954 Google reviews", "resenas.title": "What our guests say",
+        "resenas.r1.text": "Service is a ten. Traditional Mallorcan food with fresh ingredients. Arroz Brut was spectacular.",
+        "resenas.r1.author": "Maria García", "resenas.r1.date": "2 weeks ago",
+        "resenas.r2.text": "Stopping here for years. Beautiful terrace. The soup and snails are top notch.",
+        "resenas.r2.author": "Joan Perelló", "resenas.r2.date": "1 month ago",
+        "resenas.r3.text": "Authentic village restaurant. The almond granita is the best I've ever had.",
+        "resenas.r3.author": "Llucia Munar", "resenas.r3.date": "3 days ago",
+        "social.title": "Moments at Sa Raval", "social.subtitle": "Discover the daily life of our kitchen",
+        "contacto.eyebrow": "Visit us", "contacto.title": "In the center of Mallorca",
+        "contacto.label.address": "Address", "contacto.label.phone": "Phone", "contacto.label.schedule": "Hours",
+        "dias.lunes": "Monday", "dias.martes": "Tuesday", "dias.miercoles": "Wednesday", "dias.jueves": "Thursday", "dias.viernes": "Friday", "dias.sabado": "Saturday", "dias.domingo": "Sunday",
+        "horario.cerrado": "Closed", "contacto.cta_call": "Call & book",
+        "footer.tagline": "Mallorcan market kitchen · Algaida", "footer.reservas": "Bookings", "footer.copy": "© 2025 Sa Raval · Algaida",
+        "footer.address": "Carrer de S'Arraval, 8 · 07210 Algaida · +34 971 66 80 82"
       }
     };
 
+    /* --- Translations Logic --- */
     function setLanguage(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
           el.textContent = translations[lang][key];
         }
       });
+      
+      // Meta tags translation
+      const metaDesc = document.querySelector('meta[data-i18n-content]');
+      if (metaDesc && translations[lang]["meta.desc"]) {
+        metaDesc.setAttribute('content', translations[lang]["meta.desc"]);
+      }
+      const titleTag = document.querySelector('title[data-i18n]');
+      if (titleTag && translations[lang]["meta.title"]) {
+        titleTag.textContent = translations[lang]["meta.title"];
+      }
+
       document.querySelectorAll('.nav__lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
       });
@@ -870,13 +1068,33 @@
       document.documentElement.lang = lang;
     }
 
+    const langModal = document.getElementById('lang-modal');
+    
+    function hideModal() {
+      langModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.lang-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+        hideModal();
+      });
+    });
+
     document.querySelectorAll('.nav__lang-btn').forEach(btn => {
       btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
     });
 
     // Init lang
-    const savedLang = localStorage.getItem('preferredLang') || 'es';
-    setLanguage(savedLang);
+    const savedLang = localStorage.getItem('preferredLang');
+    if (savedLang) {
+      setLanguage(savedLang);
+      hideModal();
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
 
   })();
   </script>
