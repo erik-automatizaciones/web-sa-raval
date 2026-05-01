@@ -189,6 +189,48 @@ body::before {
 }
 .btn-pill:hover .btn-pill__arrow { transform: translate(2px, -2px) scale(1.08); }
 
+.resena-card__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+.resena-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--olive);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+.resena-card__author {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--bark);
+}
+.resena-card__date {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--earth);
+  opacity: 0.8;
+}
+
+.resena-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(61, 43, 31, 0.08);
+}
+
 /* Ghost pill button */
 .btn-ghost {
   display: inline-flex;
@@ -427,7 +469,25 @@ body::before {
     color      0.2s;
 }
 .nav__overlay-link:last-of-type { border-bottom: none; }
-.nav__overlay-link:hover { color: var(--olive); }
+.nav__overlay-lang {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.5s var(--spring);
+}
+.nav__overlay.open .nav__overlay-lang { opacity: 1; transform: translateY(0); }
+.nav__overlay-lang .nav__lang-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  background: rgba(61, 43, 31, 0.08);
+  border: 1px solid rgba(61, 43, 31, 0.1);
+}
+.nav__overlay-lang .nav__lang-btn.active {
+  background: var(--olive);
+  color: white;
+}
 .nav__overlay-link:focus-visible { outline: 2px solid var(--olive); outline-offset: 4px; }
 
 .nav__overlay.open .nav__overlay-link:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.04s; }
@@ -1091,8 +1151,10 @@ body::before {
    FOOTER
    ============================================================ */
 .footer {
-  background: var(--navy);
-  padding: clamp(48px, 7vw, 72px) var(--sec-h);
+  background: var(--olive);
+  color: var(--warm-white);
+  padding: 80px var(--sec-h) 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer__inner {
@@ -1192,6 +1254,25 @@ body::before {
 /* ============================================================
    RESPONSIVE — 1200px
    ============================================================ */
+@media (max-width: 768px) {
+  .carta__bento {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin: 0 calc(-1 * var(--sec-h));
+    padding-left: var(--sec-h);
+    padding-right: var(--sec-h);
+    scrollbar-width: none;
+  }
+  .carta__bento::-webkit-scrollbar { display: none; }
+  .menu-card {
+    min-width: 85vw;
+    scroll-snap-align: start;
+  }
+}
+
 @media (min-width: 1200px) {
 
   /* Carta: 4-column bento */

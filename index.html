@@ -38,10 +38,9 @@
     <nav class="nav" id="nav" aria-label="Navegación principal">
 
       <a href="#hero" class="nav__logo" aria-label="Sa Raval — volver al inicio">
-        <svg class="nav__logo-clover" width="22" height="27" viewBox="0 0 80 98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M40,50 C36,46 18,44 12,28 C6,12 20,4 30,12 C35,16 38,24 40,34 C42,24 45,16 50,12 C60,4 74,12 68,28 C62,44 44,46 40,50Z" fill="currentColor"/>
-          <path d="M40,50 C38,54 28,60 18,68 C8,76 8,90 20,88 C30,86 38,74 40,60 C42,74 50,86 60,88 C72,90 72,76 62,68 C52,60 42,54 40,50Z" fill="currentColor" opacity="0.85"/>
-          <line x1="40" y1="60" x2="52" y2="94" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <svg class="nav__logo-clover" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 10C12 10 11.5 5.5 15 4C18.5 2.5 21 5 19 8C17 11 12 11 12 11C12 11 13 16 16 17C19 18 18.5 21.5 15 21C11.5 20.5 12 15 12 15C12 15 12.5 20.5 9 21C5.5 21.5 5 18 8 17C11 16 12 11 12 11C12 11 7 11 5 8C3 5 5.5 2.5 9 4C12.5 5.5 12 10 12 10Z" fill="currentColor"/>
+          <path d="M12 15L10 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         Sa <em>Raval</em>
       </a>
@@ -54,7 +53,7 @@
       </div>
 
       <a
-        href="tel:+34971668082"
+        href="tel:+34670668082"
         class="nav__cta"
         aria-label="Llamar a Sa Raval para reservar mesa"
       >
@@ -71,7 +70,7 @@
         <li><a href="#contacto" data-i18n="nav.contacto">Cómo llegar</a></li>
       </ul>
 
-      <a href="tel:+34971668082" class="nav__mobile-tel-icon" aria-label="Llamar a Sa Raval para reservar mesa">
+      <a href="tel:+34670668082" class="nav__mobile-tel-icon" aria-label="Llamar a Sa Raval para reservar mesa">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       </a>
 
@@ -99,12 +98,18 @@
     aria-modal="true"
     aria-label="Menú de navegación"
   >
+    <div class="nav__overlay-lang" role="group" aria-label="Seleccionar idioma">
+      <button class="nav__lang-btn" data-lang="es">ES</button>
+      <button class="nav__lang-btn" data-lang="ca">CA</button>
+      <button class="nav__lang-btn" data-lang="de">DE</button>
+      <button class="nav__lang-btn" data-lang="en">EN</button>
+    </div>
     <a href="#filosofia" class="nav__overlay-link">Filosofía</a>
     <a href="#carta"     class="nav__overlay-link">Carta</a>
     <a href="#resenas"   class="nav__overlay-link">Reseñas</a>
     <a href="#contacto"  class="nav__overlay-link">Cómo llegar</a>
     <a
-      href="tel:+34971668082"
+      href="tel:+34670668082"
       class="nav__overlay-tel"
       aria-label="Llamar al restaurante Sa Raval"
     >
@@ -134,7 +139,7 @@
 
           <div class="hero__actions reveal" data-delay="4">
             <a
-              href="tel:+34971668082"
+              href="tel:+34670668082"
               class="btn-pill"
               aria-label="Llamar a Sa Raval para reservar mesa"
             >
@@ -154,9 +159,9 @@
           <div class="hero__image dbezel reveal" data-delay="2">
             <div class="dbezel__core hero__image-inner">
               <!-- Clover decoration -->
-              <svg class="hero__clover-decor" width="240" height="240" viewBox="0 0 80 98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M40,50 C36,46 18,44 12,28 C6,12 20,4 30,12 C35,16 38,24 40,34 C42,24 45,16 50,12 C60,4 74,12 68,28 C62,44 44,46 40,50Z" fill="currentColor"/>
-                <path d="M40,50 C38,54 28,60 18,68 C8,76 8,90 20,88 C30,86 38,74 40,60 C42,74 50,86 60,88 C72,90 72,76 62,68 C52,60 42,54 40,50Z" fill="currentColor" opacity="0.85"/>
+              <svg class="hero__clover-decor" width="240" height="240" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 10C12 10 11.5 5.5 15 4C18.5 2.5 21 5 19 8C17 11 12 11 12 11C12 11 13 16 16 17C19 18 18.5 21.5 15 21C11.5 20.5 12 15 12 15C12 15 12.5 20.5 9 21C5.5 21.5 5 18 8 17C11 16 12 11 12 11C12 11 7 11 5 8C3 5 5.5 2.5 9 4C12.5 5.5 12 10 12 10Z" fill="currentColor"/>
+                <path d="M12 15L10 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
               <img src="img/restaurant-terrace.jpg" alt="Sa Raval - Algaida" loading="lazy" />
             </div>
@@ -497,8 +502,14 @@
                 sacian. El arroz brut estaba espectacular. Un sitio que no
                 puedes perderte si visitas el interior de Mallorca.
               </p>
+              <div class="resena-card__user">
+                <div class="resena-card__avatar">M</div>
+                <div>
+                  <span class="resena-card__author">Maria García</span>
+                  <span class="resena-card__date">Hace 2 semanas</span>
+                </div>
+              </div>
               <footer class="resena-card__footer">
-                <span class="resena-card__author">Visitante Google</span>
                 <span class="resena-card__stars" aria-label="Cinco estrellas">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -519,8 +530,14 @@
                 La sopa mallorquina y los caracoles son de los mejores que hemos
                 probado. Precios muy honestos para la calidad que ofrecen.
               </p>
+              <div class="resena-card__user">
+                <div class="resena-card__avatar">J</div>
+                <div>
+                  <span class="resena-card__author">Joan Perelló</span>
+                  <span class="resena-card__date">Hace 1 mes</span>
+                </div>
+              </div>
               <footer class="resena-card__footer">
-                <span class="resena-card__author">Visitante Google</span>
                 <span class="resena-card__stars" aria-label="Cinco estrellas">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -541,8 +558,14 @@
                 La tarta de manzana casera, para repetir. Una joya que los de
                 fuera deberíamos conocer más.
               </p>
+              <div class="resena-card__user">
+                <div class="resena-card__avatar">L</div>
+                <div>
+                  <span class="resena-card__author">Llucia Munar</span>
+                  <span class="resena-card__date">Hace 3 días</span>
+                </div>
+              </div>
               <footer class="resena-card__footer">
-                <span class="resena-card__author">Visitante Google</span>
                 <span class="resena-card__stars" aria-label="Cinco estrellas">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
