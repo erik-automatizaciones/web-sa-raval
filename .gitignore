@@ -1,0 +1,11 @@
+.agents/
+.claude/
+.tmp/
+.gemini/
+skills-lock.json
+CLAUDE.md
+GEMINI.md
+sa-raval-prompt.md
+"Imagenes para la web"/
+node_modules/
+.DS_Store
